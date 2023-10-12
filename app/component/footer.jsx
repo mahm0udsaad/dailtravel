@@ -1,5 +1,5 @@
 "use client"
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 
@@ -26,13 +26,7 @@ const Footer = () =>{
                 </div>
         
                 <div className="w-full p-4 text-center">
-                  © 2023 Copyright:
-                  <a
-                    className="text-white"
-                    href="https://tailwind-elements.com/"
-                  >
-                    Tailwind Elements
-                  </a>
+                   2023 جميع الحقوق محفوظة © وكالة دالي ترفل
                 </div>
               </footer>
             </>

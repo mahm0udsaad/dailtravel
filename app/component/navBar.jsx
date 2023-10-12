@@ -10,7 +10,7 @@ const navigation = [
   { name: 'المجله السياحيه', href: '/', current: false },
   { name: 'خدماتنا', href: '/', current: false },
   { name: 'البرامج السياحيه', href: '/', current: false },
-  { name: 'من نحن', href: '/', current: false },
+  { name: 'من نحن', href: '/about', current: false },
   { name: 'الرئيسيه', href: '/', current: true },
 ]
 
