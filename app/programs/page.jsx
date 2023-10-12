@@ -3,3 +3,4 @@ const Programs= () =>{
         <h1>Hello</h1>
     )
 }
+export default Programs;
