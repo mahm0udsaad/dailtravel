@@ -6,10 +6,10 @@ import { Cart } from '@/context/context'
 import Link from 'next/link'
 
 const navigation = [
-  { name: 'اتصل بنا', href: '/', current: false },
-  { name: 'المجله السياحيه', href: '/', current: false },
-  { name: 'خدماتنا', href: '/', current: false },
-  { name: 'البرامج السياحيه', href: '/', current: false },
+  { name: 'اتصل بنا', href: '/contact', current: false },
+  { name: 'المجله السياحيه', href: '/magazen', current: false },
+  { name: 'خدماتنا', href: '/services', current: false },
+  { name: 'البرامج السياحيه', href: '/programs', current: false },
   { name: 'من نحن', href: '/about', current: false },
   { name: 'الرئيسيه', href: '/', current: true },
 ]
