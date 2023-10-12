@@ -73,18 +73,18 @@ const ProgressBar = ({ title, number, icon })=> {
 };
 export default function Home() {
   return (
-    <main className="flex min-h-screen  sm:w-5/6 mx-auto flex-col items-center justify-between pt-20">
+    <main className="flex min-h-screen w-[95%] lg:w-5/6 mx-auto flex-col items-center justify-between pt-20 px-4 sm:px-0">
       <Slider />
       <div className=" flex justify-end w-full pt-20">
         <div className="title text-end text-2xl w-4/5 border-b-2 h-4 border-gray"></div>
-        <h1 className="title text-end text-2xl pl-4">الوجهات السياحيه</h1>
+        <h1 className="title text-end text-2xl sm:pl-4">الوجهات السياحيه</h1>
       </div>
-      <div className="shop  grid grid-cols-4 h-screen">
+      <div className="shop grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 h-screen">
           <div className="container pt-8">
             <Card product={Georgia}/>
           </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 w-11/12 mx-auto border-t-[1px] border-gray p-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:w-11/12 mx-auto border-t-[1px] border-gray p-4">
                 {data.map((data, index) => (
                   <ProgressBar
                     key={index}
