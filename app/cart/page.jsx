@@ -28,7 +28,7 @@ const CartDetail = () => {
   
   return (
     <>
-    <div className="container mx-auto pt-20 text-end">
+    <div className="container mx-auto pt-20 text-end h-screen">
       <ul>
       {cartItems && cartItems.map((item) => (
       <li className='flex border border-gray-300 p-2 rounded-lg mb-2' key={!item.id ? item.id * 0.5 : item.id}>

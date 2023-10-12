@@ -43,7 +43,7 @@ const [total,setTotal]= useState(0)
   }
 
     return(
-        <div className="pt-20 w-5/6 mx-auto">
+        <div className="pt-20 w-5/6 mx-auto h-screen">
     {profile ? (
         <>
         <div className="bg-green-300 p-4 rounded-lg shadow-md">
