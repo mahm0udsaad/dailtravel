@@ -18,7 +18,7 @@ export default function Slider () {
                     showThumbs={false}
                     >
                         {slides.map((imgUrl,i)=>(
-                                <img key={i} src={imgUrl} alt="" className="sm:h-[90vh]" />
+                                <img key={i} src={imgUrl} alt="" className="sm:h-[92vh] w-full" />
                                 ))}
                     </Carousel>
                         </div>

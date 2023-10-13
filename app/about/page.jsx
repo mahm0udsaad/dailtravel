@@ -2,7 +2,32 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import ProgressBar from '../component/countCard';
+import {FcCustomerSupport , FcCollaboration , FcGoogle} from 'react-icons/fc'
+import {GiWorld} from 'react-icons/gi'
 
+const data = [
+  {
+    icon: <FcCustomerSupport />,
+    number: 3000,
+    title: "عملاء تمت خدمتهم",
+  },
+  {
+    icon: <GiWorld />,
+    number: 50,
+    title: "عدد وجهاتنا حول العالم",
+  },
+  {
+    icon: <FcGoogle />,
+    number: '4.8',
+    title: "تقييمنا على قوقل",
+  },
+  {
+    icon: <FcCollaboration />,
+    number: 10,
+    title: "الخدمات السياحيه المقدمة من حجز طيران وفنادق وبرامج واستخراج تأشيرات",
+  },
+];
 const About = () => {
     const ref = useRef(null)
     const isInView = useInView(ref , {once:true})
@@ -38,15 +63,29 @@ const About = () => {
         </motion.div>
        </section>
        <section>
-        <div className="flex justify-around w-full h-60">
+       <div className="my-6 grid grid-cols-2 sm:grid-cols-4 lg:w-11/12 mx-auto  border-gray">
+                {data.map((data, index) => (
+                  <ProgressBar
+                    key={index}
+                    title={data.title}
+                    number={data.number}
+                    icon={data.icon}
+                  />
+                ))}
+              </div>
+       </section>
+       <section>
+        <div className="flex justify-between w-full h-60 px-8">
+            <div className="flex w-[40%] justify-center">
             <img className='w-48' src="/social.png" alt="" />
-            <div className="">
+            </div>
+            <div className="w-[60%] px-8">
             <p className="text-end text-3xl main-color">
             كن على اتصال معنا
             <br />
-تابعنا على قنوات التواصل الإجتماعي ..
+            تابعنا على قنوات التواصل الإجتماعي ..
             </p>
-            <div className="mb-9 flex justify-center pt-8 ">
+            <div className="mb-9 flex justify-end pt-8 ">
             <a href="#!" className="mr-9 bg-blue-500 p-4 text-white">
                 <FaFacebook className="h-4 w-4" />
             </a>
@@ -63,6 +102,7 @@ const About = () => {
             </div>
         </div>
        </section>
+     
     </div>
   );
 };

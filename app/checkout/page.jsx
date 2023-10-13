@@ -27,6 +27,10 @@ const [total,setTotal]= useState(0)
       client: profile,
     });
   }, []);
+  useEffect(()=>{
+    createLink()
+
+  },[formData])
   const createLink = () => {
     const config = {
       headers: {
@@ -36,6 +40,8 @@ const [total,setTotal]= useState(0)
     axios.post(req_URL, formData , config)
       .then((res) => {
        setpayminLink(res.data.result.checkout_url)
+       console.error(payminLink);
+
       })
       .catch((err) => {
         console.error(err);
@@ -46,31 +52,29 @@ const [total,setTotal]= useState(0)
         <div className="pt-20 w-5/6 mx-auto h-screen">
     {profile ? (
         <>
-        <div className="bg-green-300 p-4 rounded-lg shadow-md">
+        <div className="bg-green-300 p-4 rounded-lg shadow-md my-8">
         <h1 className="text-2xl text-white text-center">Logged in</h1>
-        <p className="text-lg">{total} الاجمالي {profile.name}! هلا</p>
-        <button
-            className="main-bg text-white p-4 mt-4 rounded-md"
-            onClick={createLink}
+          <p className="text-lg text-end">{total} الاجمالي {profile.name}! هلا</p>
+          </div>
+        <ul>
+        <h1 className="text-end px-4 text-2xl font-semibold">: التفاصيل</h1>
+        {cartItems && cartItems.map((item) => (
+          <li className='flex p-2 rounded-lg mb-2 text-end' key={!item.id ? item.id * 0.5 : item.id}>
+          <div className="info-section flex-1 p-2">
+            <p className="text-lg ">{item.name}</p>
+            <span className="text-gray-500">SAR {item.price * item.quantity} </span>
+          </div>
+          
+        </li>
+        ))}
+        </ul>
+        <a
+            target="_blank"
+            href={payminLink}
+            className="main-bg text-white p-4 mt-4 rounded-md "
         >
-            انشاء رابط دقع
-        </button>
-        </div>
-        {payminLink && 
-          <div className="flex">
-          <input
-            value={payminLink}
-            name="Link"
-            className="w-full p-2 border border-gray-300 rounded-md"
-            readOnly
-          />
-          <button
-            className="main-bg text-white px-2 py-1 ml-2 rounded-md"
-            onClick={handleCopyLink}
-          >
-            {isCopied ? 'Copied!' : <FaCopy />}
-          </button>
-        </div>}
+          اتمام الدفع
+        </a>
         </>
     ) : (
         <OuthForm  />

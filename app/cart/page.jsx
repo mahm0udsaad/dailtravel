@@ -32,14 +32,15 @@ const CartDetail = () => {
       <ul>
       {cartItems && cartItems.map((item) => (
       <li className='flex border border-gray-300 p-2 rounded-lg mb-2' key={!item.id ? item.id * 0.5 : item.id}>
+        
       <div className="quantity-section flex items-center space-x-2">
         <button onClick={() => removeOne(item.id)} className="minus-btn bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-600 font-semibold">-</button>
         <span className="text-lg font-semibold">{item.quantity}</span>
         <button onClick={() => addOne(item.id)} className="plus-btn bg-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-600 font-semibold">+</button>
       </div>
       <div className="info-section flex-1 p-2">
-        <p className="text-lg font-semibold">{item.title}</p>
-        <span className="text-gray-500">${item.price * item.quantity}</span>
+        <p className="text-lg font-semibold">{item.name}</p>
+        <span className="text-gray-500">SAR {item.price * item.quantity} </span>
       </div>
       <div className="wrapper h-[8rem]">
         <img src={item.image} className='w-full h-full rounded-lg'/> 

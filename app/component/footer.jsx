@@ -16,7 +16,7 @@ const Footer = () =>{
                     <a href="#!" className="mr-9">
                       <FaTwitter className="h-4 w-4 text-white" />
                     </a>
-                    <a href="#!" className="mr-9">
+                    <a href="https://www.instagram.com/dalitravelsa/?igshid=YmMyMTA2M2Y%3D" className="mr-9">
                       <FaInstagram className="h-5 w-5 text-white" />
                     </a>
                     <a href="#!" className="mr-9">

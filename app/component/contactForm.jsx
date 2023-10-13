@@ -18,10 +18,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className='py-8'>
-        <h1 className="text-center text-xl sm:text-3xl">
+    <div className='p-8 z-10 relative border mb-8 shadow-lg'>
+        <h1 className="text-center text-xl sm:text-3xl main-color">
         للطلب والاستفسار، يرجى تزويدنا ببياناتك وسنقوم بالتواصل معك في أسرع وقت ممكن
-
         </h1>
       <form>
         <div className="mb-4">
@@ -121,7 +120,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded"
+          className="main-bg text-white py-2 px-8 rounded"
         >
           إرسال
         </button>
