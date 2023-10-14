@@ -5,8 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 const slides = [
     "/slider/slide-1.jpg",
-    "/slider/slide-7.png",
-    "/slider/slide-8.png",
+    "/slider/slide-7.jpg",
+    "/slider/slide-8.jpg",
     "/slider/slide-4.jpg",
 ]
 export default function Slider () {
