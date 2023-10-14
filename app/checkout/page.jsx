@@ -47,7 +47,7 @@ const [total,setTotal]= useState(0)
         console.error(err);
       });
   }
-
+  
     return(
         <div className="pt-20 w-5/6 mx-auto h-screen">
     {profile ? (

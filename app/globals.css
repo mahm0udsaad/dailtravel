@@ -4,12 +4,16 @@
 
 :root{
     --main-color: #47b6c7;
+    --primary-color:#454545;
 }
 .main-bg{
     background-color: var(--main-color);
 }
 .main-color{
     color: var(--main-color);
+}
+.primary-color{
+    color: var(--primary-color);
 }
 footer{
     background-color: #000000e6;

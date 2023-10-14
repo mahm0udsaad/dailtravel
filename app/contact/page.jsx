@@ -10,7 +10,11 @@ import GLocation from '../component/map';
 const Contact= () =>{
     return(
        <main className='pt-20 mb-8 text-end w-11/12 lg:w-5/6 mx-auto px-8 relative'>
-        <motion.div
+        <div className="wrapper relative">
+            <img src={'/slider/slide-6.jpg'} alt="" className="sm:h-[70vh] w-full" />
+        </div>
+       <div className="relative pt-8">
+       <motion.div
        initial={{scale:0}}
        animate={{scale:1}}
        className="absolute top-0 right-0 z-5">
@@ -19,6 +23,7 @@ const Contact= () =>{
         </svg>
        </motion.div>
         <ContactForm/>
+       </div>
             <div className="border-b border-gray-300 pb-4">
             <h2 className="text-xl font-semibold">كيف تصل الينا</h2>
             <div className="flex items-center justify-end mt-2 w-full">

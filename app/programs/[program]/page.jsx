@@ -18,9 +18,10 @@ export default async function programDetails({params})  {
   return (
     <>
     <main className="pt-24">
-        <section className={`flex w-11/12 xl:w-5/6 justify-between mx-auto `}>
-        <div className="paragraph text-end w-[50%]">
-            <h1 className="text-xl pb-8">{program.name}</h1>
+        <section className={`flex sm:flex-row flex-col-reverse w-11/12 xl:w-5/6 justify-between mx-auto `}>
+        <div className="paragraph text-end sm:w-1/2">
+            <h1 className="text-xl">{program.name}</h1>
+            <p className="py-4"  >المده :  {program.date}  </p>
             <p>{program.description}</p>
             <h1 className="text-end text-2xl py-4">
                : الفنادق
@@ -38,7 +39,7 @@ export default async function programDetails({params})  {
             ))}
             </div>
         </div>
-       <div className="w-[40%]">
+       <div className="sm:w-[40%] sm:py-0 py-8">
        <div className="wrapper relative">
             <h3 className="p-2 absolute top-0 w-full flex justify-center text-white font-semibold text-2xl bg-[#00000059]">{program.name.split(" ").length > 2 ? program.name.split(" ")[1] : program.name}</h3>
             <img src={program.image} alt={program.title} className="h-[25rem] w-full"/>

@@ -2,6 +2,7 @@
 import { Cart } from "@/context/context"
 import Link from "next/link"
 import { useContext } from "react"
+import {PiShootingStarBold} from 'react-icons/pi'
 
 const Card =({product , i})=>{
     const {setCartItems , cartItems} = useContext(Cart)
@@ -23,6 +24,10 @@ const Card =({product , i})=>{
              <Link href={`programs/${i}`}>
              <div className="img-container w-full h-[20rem] relative">
              <h3 className="p-2 absolute top-0 w-full flex justify-center text-white font-semibold text-2xl bg-[#00000059]">{product.name.split(" ").length > 2 ? product.name.split(" ")[1] : product.name}</h3>
+             {product.special && <span className="bg-blue-800 p-4 flex  absolute top-12 text-white">
+              عرض خاص
+              <PiShootingStarBold  className="text-yellow-300"/>
+              </span> }
               <div className="bg-[#21244bd1] p-3 rounded-xl absolute bottom-0">
                 <p className="text-[10px] text-white text-justify">
                   {product.firstDescription}
@@ -46,4 +51,25 @@ const Card =({product , i})=>{
               </div>
     )
 }
-export default Card ;
+const BlogCard =({product , i})=>{
+
+  return(
+      <div className="card border rounded hover:shadow-2xl cursor-pointer">
+           <div className="img-container w-full h-[20rem] relative">
+            <img className="w-full h-full rounded-t" src={product.image} alt={product.name} />
+            </div>
+           <div className="cardDscription text-end">
+          <div className="action-section p-4 flex justify-between">
+          <Link href={`blogs/${i}`} className="hover:bg-sky-300 border border-sky-300 p-4 transition ">  
+            عرض
+            </Link>
+            <div>
+            <h3 className="p-2">{product.title}</h3>
+          <p className="text-blue-800">{product.date}</p>
+            </div>
+           </div>
+          </div>
+            </div>
+  )
+}
+export  {Card , BlogCard} ;

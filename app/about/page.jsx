@@ -33,7 +33,14 @@ const About = () => {
     const isInView = useInView(ref , {once:true})
   return (
     <div className="container mx-auto pt-20">
-        <div className="w-full h-[70vh]">
+        <div className="w-full h-[50vh] sm:h-[85vh] relative">
+            <motion.div
+            initial={{ x:500 }}
+            animate={{ x:0 }}
+            className="absolute sm:bottom-36 bottom-24 right-8  sm:right-32">
+              <h1 className="sm:text-6xl text-4xl font-semibold primary-color">وجهتك السياحيه</h1>
+              <span className='sm:text-2xl text-xl font-semibold text-[#5ce1e6]'>لاي مكان في العالم</span>
+            </motion.div>
             <img className='h-full w-full' src="/about.jpg" alt="" />
         </div>
        <section className='relative h-[70vh] flex flex-col items-center justify-center my-8 px-8'>
@@ -50,7 +57,7 @@ const About = () => {
          animate={{opacity:isInView ? 1:0}}
          transition={{duration:.5}}
         ref={ref} className='z-10 text-end '>
-        <h1 className="text:text-xl sm:text-3xl font-bold mb-4 text-[#148b9d]">من نحن</h1>
+        <h1 className="text-3xl font-bold mb-4 text-[#148b9d]">من نحن</h1>
       <p className="text-xl mb-4">
         المعنى الحقيقي للريادة والإبداع في مجال السفر والسياحة فليست جودة برامجنا هي الميزة الوحيدة لنا فنحن نتميز بالابتكار والتنوع والشمولية في مجال السفر والسياحة.
       </p>
@@ -75,17 +82,17 @@ const About = () => {
               </div>
        </section>
        <section>
-        <div className="flex justify-between w-full h-60 px-8">
-            <div className="flex w-[40%] justify-center">
+        <div className="flex sm:flex-row flex-col justify-between w-full sm:h-60 px-8">
+            <div className="sm:flex sm:mx-0 mx-auto w-[40%] justify-center">
             <img className='w-48' src="/social.png" alt="" />
             </div>
-            <div className="w-[60%] px-8">
+            <div className="sm:w-[60%] px-8">
             <p className="text-end text-3xl main-color">
             كن على اتصال معنا
             <br />
             تابعنا على قنوات التواصل الإجتماعي ..
             </p>
-            <div className="mb-9 flex justify-end pt-8 ">
+            <div className="mb-9 flex justify-center sm:justify-end pt-8 ">
             <a href="#!" className="mr-9 bg-blue-500 p-4 text-white">
                 <FaFacebook className="h-4 w-4" />
             </a>
