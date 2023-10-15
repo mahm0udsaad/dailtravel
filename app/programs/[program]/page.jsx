@@ -75,7 +75,7 @@ export default async function programDetails({params})  {
             </div>
                 <div className="sm:w-[40%] sm:py-0 py-8">
                 <div className="wrapper relative">
-                        <h3 className="p-2 absolute top-0 w-full flex justify-center text-white font-semibold text-2xl bg-[#00000059]">{program.name.split(" ").length > 2 ? program.name.split(" ")[1] : program.name}</h3>
+                        <h3 className="p-2 absolute top-0 w-full flex justify-center text-white font-semibold text-2xl bg-[#00000059]">{program.name}</h3>
                         <img src={program.image} alt={program.title} className="h-[25rem] w-full"/>
                     </div>
                 <div className="flex flex-col w-full text-end justify-end">

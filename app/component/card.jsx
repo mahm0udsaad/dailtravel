@@ -119,6 +119,26 @@ const VisaCard =({product , i})=>{
             </div>
   )
 }
+const ServiceCard =({product , i})=>{
+
+  return(
+      <div className="card border rounded hover:shadow-2xl cursor-pointer">
+           <div className="img-container w-full h-[20rem] relative">
+            <img className="w-full h-full rounded-t" src={product.image} alt={product.name} />
+            </div>
+           <div className="cardDscription text-end">
+          <div className="action-section p-4 flex justify-between">
+          <Link href={`services/${i}`} className="hover:bg-sky-300 border border-sky-300 p-4 transition ">  
+             عرض التفاصيل
+            </Link>
+            <div>
+            <h3 className="p-2">{product.visaType}</h3>
+            </div>
+           </div>
+          </div>
+            </div>
+  )
+}
 const Lable = ({title}) =>{
   return(
     <div className=" flex justify-between w-full pt-16">
@@ -127,4 +147,4 @@ const Lable = ({title}) =>{
       </div>
   )
 }
-export  {Card , BlogCard , Lable , VisaCard} ;
+export  {Card , BlogCard , Lable , VisaCard , ServiceCard} ;

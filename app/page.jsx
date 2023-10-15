@@ -1,6 +1,6 @@
 "use client"
 import Slider from "./component/slider"
-import { Georgia, programs, visaRequirements } from "@/data/data"
+import { Georgia, hotel, programs, visaRequirements } from "@/data/data"
 import Programs from "./component/programsGrid"
 import { BlogCard, Card, Lable, VisaCard } from "./component/card";
 
@@ -24,6 +24,12 @@ export default function Home() {
         <Lable title={"التأشيرات"}/>
         <div className="shop mx-auto sm:px-0 px-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-4 container pt-8 h-fit">
         {visaRequirements.map((program , i) => <VisaCard key={i} product={program} i={i} />)}
+        </div>
+      </section>
+      <section className="w-11/12">
+        <Lable title={"حجز فنادق"}/>
+        <div className="shop mx-auto sm:px-0 px-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-4 container pt-8 h-fit">
+        <VisaCard product={hotel} i={0} />
         </div>
       </section>
     </main>
