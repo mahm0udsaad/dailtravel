@@ -620,7 +620,7 @@ const tableData = [
 const hotel = {
   price:'تواصل لمعرفه الاسعار',
   name: "حجز فنادق",
-  image:'/new folder/hotel.jpg',
+  image:'/New folder/hotel.jpg',
   number: "+966546077002 واتساب",
   description: "احصل على أفضل الأسعار لإقامتك الفندقية مع خدمة مساعدة على مدار الساعة مع مستشاري السفر. احجز في أكثر من 2 مليون فندق بدون رسوم حجز. ضمان أفضل الأسعار",
   included: [

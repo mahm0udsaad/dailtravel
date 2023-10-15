@@ -7,7 +7,6 @@ import { BlogCard, Card, Lable, ServiceCard, VisaCard } from "./component/card";
 
 
 export default function Home() {
-  console.log(programs);
   return (
     <main className="flex min-h-screen sm:w-[95%] 2xl:w-5/6 mx-auto flex-col items-center justify-between py-20 sm:py-16 px-4 sm:px-0">
       <Slider />
