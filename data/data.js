@@ -284,7 +284,7 @@
   {
     id: 461,
     price:"$750",
-    image:'/new folder/philipens.jpg',
+    image:'/New folder/philipens.jpg',
     name: "برنامج فليبين السياحي",
     date: "7 ليالى 8 أيام",
     availableDates: "متاح من 1 يونيو حتى 31 اغسطس 2023",
@@ -325,7 +325,7 @@
   },
   {
     name: "برنامج جورجيا 7 ايام 6 ليالى",
-    image:'/new folder/georgia.jpg',
+    image:'/New folder/georgia.jpg',
     date: "1 ليلة تبليسي – 2 ليلة باكورياني – 2 ليالي باتومي - 1 ليلة تبليسي",
     itinerary: [
       "اليوم الاول: استقبال من المطار- توصيل الى الفندق – جولة لزيارة معالم تبليسي (حديقة حيدر علييف – مسجد تبليسي – الحمامات الكبريتية – شلال الغابة – بوتانيكال جاردن – التلفريك – قلعة ناريكالا – شارع روستافيلي – منتزه الأوروبيين – شارديني) – مبيت في تبليسي",
@@ -636,7 +636,7 @@ const hotel = {
 const tickets = {
   price:'تواصل لمعرفه الاسعار',
   name: "حجز طيران",
-  image:'/new folder/airplan.jpg',
+  image:'/New folder/airplan.jpg',
   number: "+966546077002 واتساب",
   description:" لدينا حجز طيران لجميع الدول.",
   included: [
@@ -651,7 +651,7 @@ const tickets = {
 const carRental = {
   price:'تواصل لمعرفه الاسعار',
   name: "تأجير سيارات",
-  image:'/new folder/car-rent.jpg',
+  image:'/New folder/car-rent.jpg',
   number: "+966546077002 واتساب",
   description: "لدينا ايجار سيارات لكافة دول العالم.",
   included: [
@@ -664,7 +664,7 @@ const carRental = {
 };
 const internationalDrivingLicense = {
   name: "رخصة القيادة الدولية",
-  image:'/new folder/driving-licence.jpg',
+  image:'/New folder/driving-licence.jpg',
   number: "+966546077002 واتساب",
   description: "هي وثيقة دولية تم تشريعها من قبل الأمم المتحدة طبقًا للاتفاقيات الدولية الخاصة بتنظيم السير على الطرق وهي تسمح لحاملها القيادة خارج دولته المقيم فيها حيث أنها تصدر بناءً على رخصة القيادة التي تؤهل حاملها القيادة، وهي غير صالحة للقيادة في السعودية.",
   included: [
