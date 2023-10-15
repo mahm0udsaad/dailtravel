@@ -22,7 +22,7 @@ export default function Slider () {
                      autoPlay={true}> 
                         {slides.map((imgUrl,i)=>(
                                 <div className="wrapper relative">
-                                    <img key={i} src={imgUrl} alt="" className="sm:h-[92vh] w-full" />
+                                    <img key={i} src={imgUrl} alt="" className="h-[70vh] sm:h-[92vh] sm:w-full" />
                                 </div>
                                 ))}
                     </Carousel>

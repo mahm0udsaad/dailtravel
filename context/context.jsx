@@ -4,6 +4,9 @@ import  { createContext, useEffect, useState } from 'react';
 export const Cart =createContext();
 
 const CartProvider = (props) => {
+  const [total,setTotal]= useState(0)
+  const [numOfItems, setNumOfItems] = useState(0);
+
   const [cartItems, setCartItems] = useState(() => {
     if (typeof window == 'undefined') {
       return null;
@@ -12,8 +15,8 @@ const CartProvider = (props) => {
     return cart && cart !== 'undefined' ? JSON.parse(cart) : [];
   });
   const [formData, setFormData] = useState({
-    amount: 100,
-    currency: "QAR",
+    amount: total,
+    currency: "SAR",
     order_id: "123456",
     client: {
         name: "",
@@ -22,8 +25,6 @@ const CartProvider = (props) => {
     },
     language: "ar",
     });
-  const [numOfItems, setNumOfItems] = useState(0);
-  const [total,setTotal]= useState(0)
   const [profile , setProfile] = useState(()=>{
   if(typeof window == 'undefined'){
     return null;

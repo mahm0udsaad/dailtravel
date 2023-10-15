@@ -4,6 +4,8 @@ import axios from "axios"
 import { useContext, useEffect, useState } from "react"
 import { FaCopy } from 'react-icons/fa'; // Import the React copy ico
 import OuthForm from "../component/form"
+import {  randomPrograms } from "@/data/data";
+import Programs from "../component/programsGrid";
 
 const Checkout = () =>{
 const KEY = 'E4B73FEE-F492-4607-A38D-852B0EBC91C9'
@@ -18,38 +20,40 @@ const handleCopyLink = () => {
     setTimeout(() => setIsCopied(false), 20000); // Reset the copied state after 2 seconds
   });
 };
-const [total,setTotal]= useState(0)
+const [total,setTotal]= useState(()=>{
+ return cartItems.reduce((total, item) => total + item.price * item.quantity, 0)
+})
+const createLink = () => {
+  const config = {
+    headers: {
+      'api_key': KEY,
+    },
+  };
+  axios.post(req_URL, formData , config)
+    .then((res) => {
+     setpayminLink(res.data.result.checkout_url)
+     console.error(payminLink);
 
-  useEffect(() => {
-    setTotal(cartItems && cartItems.reduce((total, item) => total + item.price * item.quantity, 0));
-    setFormData({ 
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+  useEffect(()=>{
+    console.log(formData.client , formData.amount);
+    setFormData({
       ...formData,
+      amount: total, 
       client: profile,
     });
-  }, []);
+  },[profile])
   useEffect(()=>{
+    
     createLink()
-
-  },[formData])
-  const createLink = () => {
-    const config = {
-      headers: {
-        'api_key': KEY,
-      },
-    };
-    axios.post(req_URL, formData , config)
-      .then((res) => {
-       setpayminLink(res.data.result.checkout_url)
-       console.error(payminLink);
-
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }
+ },[formData])
   
     return(
-        <div className="pt-20 w-5/6 mx-auto h-screen">
+        <div className="py-20 w-5/6 mx-auto ">
     {profile ? (
         <>
         <div className="bg-green-300 p-4 rounded-lg shadow-md my-8">
@@ -68,13 +72,20 @@ const [total,setTotal]= useState(0)
         </li>
         ))}
         </ul>
-        <a
+      
+        {!payminLink ? (
+        <div className="w-8 h-8 border-t-2 border-blue-500 border-solid rounded-full animate-spin"></div>
+      ) : (
+           <a
             target="_blank"
             href={payminLink}
             className="main-bg text-white p-4 mt-4 rounded-md "
         >
           اتمام الدفع
         </a>
+      )}
+
+    <Programs programs={randomPrograms} title={"قد تعجبك"}/>
         </>
     ) : (
         <OuthForm  />

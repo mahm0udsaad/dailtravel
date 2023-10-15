@@ -35,12 +35,12 @@ const Card =({product , i})=>{
     return(
         <div className="card border rounded hover:shadow-2xl cursor-pointer">
              <Link href={`programs/${i}`}>
-             <div ref={ref} className="img-container w-full h-[20rem] relative overflow-hidden">
+             <div ref={ref} className="img-container w-full sm:h-[25rem] relative overflow-hidden">
              <motion.h1
              initial={{x:-400}}
              animate={{x:isInview?0:-400}}
              transition={{duration:.4}}
-             style={{backgroundColor:`${i < bgColors.length? bgColors[i] : '#ff0000a1'}`,borderRadius:' 0 0 3rem 0'}} className="p-3 absolute right-9 top-0 w-full flex justify-center text-white font-semibold text-xl" >{product.name}</motion.h1>
+             style={{backgroundColor:`${i < bgColors.length? bgColors[i] : '#ff0000a1'}`,borderRadius:' 0 0 3rem 0'}} className="p-3 absolute sm:right-9 top-0 w-full flex justify-center text-white sm:font-semibold lg:text-xl" >{product.name}</motion.h1>
              {product.special && <span className="main-bg p-4 flex  absolute top-14 text-white">
               عرض خاص
               <PiShootingStarBold  className="text-yellow-300"/>
@@ -122,17 +122,17 @@ const VisaCard =({product , i})=>{
 const ServiceCard =({product , i})=>{
 
   return(
-      <div className="card border rounded hover:shadow-2xl cursor-pointer">
+      <div className="w-11/12 sm:mx-0 mx-auto sm:w-[20rem] card border rounded hover:shadow-2xl cursor-pointer">
            <div className="img-container w-full h-[20rem] relative">
             <img className="w-full h-full rounded-t" src={product.image} alt={product.name} />
             </div>
            <div className="cardDscription text-end">
           <div className="action-section p-4 flex justify-between">
-          <Link href={`services/${i}`} className="hover:bg-sky-300 border border-sky-300 p-4 transition ">  
+          <Link href={`services/${i}`} className="hover:bg-sky-300 hover:text-white border border-sky-300 p-4 transition ">  
              عرض التفاصيل
             </Link>
-            <div>
-            <h3 className="p-2">{product.visaType}</h3>
+            <div className="flex items-center"> 
+            <h3 className="text-xl text-black">{product.name}</h3>
             </div>
            </div>
           </div>

@@ -20,7 +20,7 @@ export default async function serviceDetails({params})  {
         <div className="paragraph text-end sm:w-1/2">
             <h1 className="text-2xl font-semibold">{service.name}</h1>
             <p className='text-xl py-4'>{service.description}</p>
-            <p>{service.included}</p>
+            <ul>{service.included.map((e , i)=> <li key={i}>{e}</li>)}</ul>
             <p>{service.number}</p>
             </div>
                 <div className="sm:w-[40%] sm:py-0 py-8">
@@ -43,10 +43,10 @@ export default async function serviceDetails({params})  {
 
                    </a>
                 </li>
-                <li className="px-3 flex w-56 justify-around hover:opacity-50 transition p-4 items-center rounded-full bg-rose-700 text-white">
+                <a target="_blank" href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=DmwnWstptJPZxMVZsTRFznCxQwDTflLLFZXdWcXGFhFVccMtsWRFcCZZKZwVKPlPfdQrMNcfXQwG" className="px-3 flex w-56 justify-around hover:opacity-50 transition p-4 items-center rounded-full bg-rose-700 text-white">
                      sales@dalitravelsa.com
                     <TbBrandGmail className="text-2xl"/>
-                </li>
+                </a>
             </ul>
             </div>
        </div>

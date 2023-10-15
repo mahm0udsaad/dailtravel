@@ -618,50 +618,73 @@ const tableData = [
   },
 ];
 const hotel = {
+  price:'تواصل لمعرفه الاسعار',
   name: "حجز فنادق",
-  number: "0533984442 واتساب",
+  image:'/new folder/hotel.jpg',
+  number: "+966546077002 واتساب",
   description: "احصل على أفضل الأسعار لإقامتك الفندقية مع خدمة مساعدة على مدار الساعة مع مستشاري السفر. احجز في أكثر من 2 مليون فندق بدون رسوم حجز. ضمان أفضل الأسعار",
   included: [
     "لدينا حجز الفنادق لجميع الدول بارخص الاسعار",
-    "نرجو ارسال علي الارقام التاليه:",
-    "المدينة:",
-    "التاريخ:",
-    "عدد الليالي:",
-    "عدد الاشخاص:",
+    "نرجو ارسال علي هذه البيانات علي الوتساب",
+    "المدينة",
+    "التاريخ",
+    "عدد الليالي",
+    "عدد الاشخاص",
   ],
 
 }
 const tickets = {
-  name: "حجز فنادق",
-  number: "0533984442 واتساب",
+  price:'تواصل لمعرفه الاسعار',
+  name: "حجز طيران",
+  image:'/new folder/airplan.jpg',
+  number: "+966546077002 واتساب",
   description:" لدينا حجز طيران لجميع الدول.",
   included: [
-    "نرجو ارسال علي الارقام التاليه:",
-    "المدينة الاقلاع:",
-    "مدينه الوصول :",
-    "تاريخ الذهاب والعوده :",
-    "عدد الاشخاص:",
+    "نرجو ارسال البيانات علي الوتساب:",
+    "المدينة الاقلاع",
+    "مدينه الوصول ",
+    "تاريخ الذهاب والعوده ",
+    "عدد الاشخاص",
   ],
 
 }
 const carRental = {
+  price:'تواصل لمعرفه الاسعار',
   name: "تأجير سيارات",
-  number: "0533984442 واتساب",
+  image:'/new folder/car-rent.jpg',
+  number: "+966546077002 واتساب",
   description: "لدينا ايجار سيارات لكافة دول العالم.",
   included: [
-    "نرجو ارسال علي الارقام التاليه:",
-    "المدينة الاقلاع:",
-    "مدينه الوصول :",
-    "تاريخ الذهاب والعوده :",
-    "عدد الايام:",
+    "نرجو ارسال علي الارقام التاليه",
+    "المدينة الاقلاع",
+    "مدينه الوصول ",
+    "تاريخ الذهاب والعوده ",
+    "عدد الايام",
   ],
 };
+const internationalDrivingLicense = {
+  name: "رخصة القيادة الدولية",
+  image:'/new folder/driving-licence.jpg',
+  number: "+966546077002 واتساب",
+  description: "هي وثيقة دولية تم تشريعها من قبل الأمم المتحدة طبقًا للاتفاقيات الدولية الخاصة بتنظيم السير على الطرق وهي تسمح لحاملها القيادة خارج دولته المقيم فيها حيث أنها تصدر بناءً على رخصة القيادة التي تؤهل حاملها القيادة، وهي غير صالحة للقيادة في السعودية.",
+  included: [
+    "صورة جواز السفر",
+    "صورة رخصة القيادة (من أي دولة في العالم) سارية المفعول.",
+    "1 صور شخصية.",
+  ],
+};
+
 const services = [
   hotel,
   tickets,
-  carRental
+  carRental,
+  internationalDrivingLicense
 ]
 
+const shuffledPrograms = [...programs].sort(() => Math.random() - 0.5);
+
+// Select the first four elements (randomly shuffled)
+const randomPrograms = shuffledPrograms.slice(0, 4);
 
 
 
@@ -671,5 +694,4 @@ const services = [
 
 
 
-
-export { travelArticles , programs , tableData ,visaRequirements , hotel , services}
+export { travelArticles , programs , tableData ,visaRequirements , hotel , services , randomPrograms}

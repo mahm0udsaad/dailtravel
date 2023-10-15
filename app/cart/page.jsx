@@ -2,7 +2,7 @@
 import { Cart } from '@/context/context';
 import Link from 'next/link';
 import React, { useContext ,useEffect ,useState} from 'react';
-
+import {BiCartAdd} from 'react-icons/bi'
 
 const CartDetail = () => {
   const [uniqueItems, setuniqueItems] = useState([]);
@@ -28,7 +28,7 @@ const CartDetail = () => {
   
   return (
     <>
-    {cartItems ? (
+    {cartItems[0] ? (
       <div className="container mx-auto pt-20 text-end h-screen">
       <ul>
       {cartItems && cartItems.map((item) => (
@@ -57,7 +57,11 @@ const CartDetail = () => {
     </div>
     ):(
       <div className="h-screen flex justify-center items-center">
-        <h1 className='pt-20 text-2xl font-semibold'>you need to add items </h1>
+        <div
+         className='pt-20 text-2xl font-semibold'>
+        <BiCartAdd  className='text-center w-full text-6xl my-8'/>
+          you need to add items 
+          </div>
       </div>
     )}
     </>
