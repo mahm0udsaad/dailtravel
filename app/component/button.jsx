@@ -17,7 +17,6 @@ const Btn = ({product}) =>{
         if (!productToAdd) {
           setCartItems(prev => [...prev, { ...product, quantity: 1 }]);
         }
-        console.log(cartItems);
       };
 
     return(

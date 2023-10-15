@@ -20,15 +20,16 @@ const handleCopyLink = () => {
     setTimeout(() => setIsCopied(false), 20000); // Reset the copied state after 2 seconds
   });
 };
-const [total,setTotal]= useState(()=>{
- return cartItems.reduce((total, item) => total + item.price * item.quantity, 0)
-})
+const [total, setTotal] = useState(() => {
+  return cartItems ? cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0) : 0;
+});
 const createLink = () => {
   const config = {
     headers: {
       'api_key': KEY,
     },
   };
+
   axios.post(req_URL, formData , config)
     .then((res) => {
      setpayminLink(res.data.result.checkout_url)
@@ -39,8 +40,8 @@ const createLink = () => {
       console.error(err);
     });
 }
+
   useEffect(()=>{
-    console.log(formData.client , formData.amount);
     setFormData({
       ...formData,
       amount: total, 
@@ -48,7 +49,6 @@ const createLink = () => {
     });
   },[profile])
   useEffect(()=>{
-    
     createLink()
  },[formData])
   
