@@ -365,7 +365,7 @@ const visaRequirements = [
   {
     visaType: "تاشيرة الشنجن",
     price:'تواصل لمعرفه الاسعار',
-    image:'/new folder/europ-flag.jpg',
+    image:'/New folder/europ-flag.jpg',
     included: [
       "كشف حساب انجليزي مختوم من البنك اخر ثلاث شهور يوجد به رصيد لا يقل عن 20 الف ريال .",
       "خطاب تعريف من العمل باللغة الإنجليزية موضح بة الراتب والمسمي الوظيفي وتاريخ بداية العمل ( مصدق من الغرفة التجارية اذا كان العمل فى القطاع الخاص ) .",
@@ -380,7 +380,7 @@ const visaRequirements = [
   {
     visaType: "تأشيرة الامريكية",
     price:'تواصل لمعرفه الاسعار',
-    image:'/new folder/usa-flag.jpg',
+    image:'/New folder/usa-flag.jpg',
     included: [
       "الجواز الأصل صالح لمدة 7 اشهر علي الأقل",
       "2 صورة شخصية حديثة خلفية بيضاء مقاس 5 في 5 مكشوف الرأس للرجال.",
@@ -392,7 +392,7 @@ const visaRequirements = [
   {
     visaType: "تأشيرة البوسنة",
     price:'تواصل لمعرفه الاسعار',
-    image:'/new folder/flag-bosnia-herzegovina.jpg',
+    image:'/New folder/flag-bosnia-herzegovina.jpg',
     included: [
       "الجواز الأصل صالح لمدة 7 اشهر علي الأقل",
       "2 صورة شخصية حديثة خلفية بيضاء مقاس 3.5 في 4.5 مكشوف الرأس للرجال.",
