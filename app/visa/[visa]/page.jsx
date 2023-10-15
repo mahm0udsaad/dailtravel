@@ -42,10 +42,10 @@ export default async function visaDetails({params})  {
 
                    </a>
                 </li>
-                <li className="px-3 flex w-56 justify-around hover:opacity-50 transition p-4 items-center rounded-full bg-rose-700 text-white">
+                <a target="_blank" href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=DmwnWstptJPZxMVZsTRFznCxQwDTflLLFZXdWcXGFhFVccMtsWRFcCZZKZwVKPlPfdQrMNcfXQwG" className="px-3 flex w-56 justify-around hover:opacity-50 transition p-4 items-center rounded-full bg-rose-700 text-white">
                      sales@dalitravelsa.com
                     <TbBrandGmail className="text-2xl"/>
-                </li>
+                </a>
             </ul>
             </div>
        </div>

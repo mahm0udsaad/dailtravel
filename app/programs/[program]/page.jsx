@@ -91,16 +91,16 @@ export default async function programDetails({params})  {
                 <p>:يمكنك التواصل معنا عبر</p>
                 <ul className="flex flex-col items-end space-y-4 w-full pt-3">
                     <li className="px-3">
-                    <a className="flex" href="http://wa.me/+966546077002" target="_blank" rel="noopener noreferrer">
+                    <a className="flex w-52 justify-around hover:opacity-50 transition p-4 items-center rounded-full bg-green-500 text-white" href="http://wa.me/+966546077002" target="_blank" rel="noopener noreferrer">
                     Whatsapp
-                        <BsWhatsapp className="text-green-500 text-2xl mx-2"/>
+                        <BsWhatsapp className=" text-2xl"/>
 
                    </a>
                 </li>
-                <li className="px-3 flex">
+                <a target="_blank" href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=DmwnWstptJPZxMVZsTRFznCxQwDTflLLFZXdWcXGFhFVccMtsWRFcCZZKZwVKPlPfdQrMNcfXQwG" className="px-3 flex w-56 justify-around hover:opacity-50 transition p-4 items-center rounded-full bg-rose-700 text-white">
                      sales@dalitravelsa.com
-                    <TbBrandGmail className="text-rose-700 text-2xl mx-2"/>
-                </li>
+                    <TbBrandGmail className="text-2xl"/>
+                </a>
             </ul>
             </div>
        </div>
